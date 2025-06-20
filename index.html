@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav id="sticky-nav">
+    <a href="#top" class="home-button">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <img src="files/chicago.jpeg" alt="Hero Image" class="hero-image" />
+
+    <header class="overlay-header">
+      <h1>Brian Shen</h1>
+      <div class="social-icons">
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </header>
+  </section>
+
+
+    <main>
+      
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <img src="files/gradphoto.jpg" alt="Brian Shen profile photo" width="200" />
+          <p>
+            I'm a proud UW–Madison alum, where I earned my Bachelor's in Computer Science.
+            Now, I'm a graduate student at the University of Chicago, working toward my Master's in Computer Science,
+            specializing in High Performance Computing. I'm interested in leveraging advanced computing technologies to 
+            tackle complex computational problems, optimizing computing systems and algorithms to achieve peak performance. 
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+          <h3> Personal projects </h3>
+          <div class="project-subsection">
+            <ul>
+              <li><strong>Distributed system benchmark:</strong> INP </li>
+            </ul>
+          </div>
+
+
+          <h3> Notable UW-Madison projects </h3>
+          <div class="project-subsection">
+            <ul>
+              <li><strong>March Madness Neural Network:</strong> Deep learning framework to predict March Madness games</li>
+              <p> Read about it here: <a href="files/ANN Blog Post.pdf" target="_blank" rel="noopener noreferrer"> March Madness Synopsis</a> </p>
+              <li><strong>Fuse based file system:</strong> Another fun experiment.</li>
+              <li><strong>Transmission Control Protocol (TCP) implementation:</strong> Another fun experiment.</li>
+            </ul>
+          </div>
+      </section>
+
+      <section id="skills">
+          <h2>Skills & Tech Stack</h2>
+        
+          <h3> Programming Languages</h3>
+          <ul class="skills-list">
+            <li>C++</li><li>C</li><li>Java</li><li>Python</li><li>R</li>
+            <li>JavaScript</li><li>HTML</li><li>CSS</li><li>PySpark</li><li>C#</li>
+          </ul>
+        
+          <h3> Frameworks & Libraries</h3>
+          <ul class="skills-list">
+            <li>React</li><li>React Native</li><li>TensorFlow</li>
+            <li>pandas</li><li>Unity</li><li>Firebase</li>
+          </ul>
+        
+          <h3> Tools & Platforms</h3>
+          <ul class="skills-list">
+            <li>Git</li><li>GitHub</li><li>Perforce</li>
+            <li>Linux CLI</li><li>PowerBI</li><li>Databricks</li>
+          </ul>
+        </section>
+
+        <section id="resume">
+          <h2>Resume</h2>
+          <a href="files/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+          <iframe src="/files/resume.pdf" width="100%" height="400px" title="Resume"></iframe>
+        </section>
+        
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Personal email: <a href="mailto:your.email@example.com">brianshen@gmail.com</a></p>
+        
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Brian Shen</p>
+    </footer>
+
+    <script>
+    const stickyNav = document.getElementById('sticky-nav');
+    const hero = document.querySelector('.hero');
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > hero.offsetHeight - 80){
+        stickyNav.classList.add('scrolled');
+      } else {
+        stickyNav.classList.remove('scrolled');
+      }
+    });
+
+  </script>
+
+</body>
+</html>

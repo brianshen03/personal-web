@@ -64,27 +64,61 @@
 
 
       <section id="projects">
-        <div class="section-inner"> 
+        <div class="section-inner">
+          <h2>Projects</h2>
+          <p class="project-subtitle">Click a card to view details</p>
+          <div class="project-grid">
 
-        <h2>Projects</h2>
-          <h3> Personal projects </h3>
-          <div class="project-subsection">
-            <ul>
-              <li><strong>Distributed system benchmark:</strong> INP </li>
-            </ul>
-          </div>
+            <a class="project-card"
+              href="https://github.com/brianshen03/cs640TCP"
+              target="_blank" rel="noopener noreferrer">
+              <div class="card-content">
+                <h3>Mini TCP Stack</h3>
+                <p>Implemented a three‑way handshake, sliding‑window flow control, timeout + fast‑retransmit recovery, one’s‑complement checksums, and a FIN close sequence. 
+                  Transfers remain error‑free under 5 % packet loss in Mininet testbeds.</p>
 
-          <h3> Notable UW-Madison projects </h3>
-          <div class="project-subsection">
-            <ul>
-              <li><strong>March Madness Neural Network:</strong> Deep learning framework to predict March Madness games</li>
-              <p> Read about it here: <a href="files/ANN Blog Post.pdf" target="_blank" rel="noopener noreferrer"> March Madness Synopsis</a> </p>
-              <li><strong>Fuse based file system:</strong> Another fun experiment.</li>
-              <li><strong>Transmission Control Protocol (TCP) implementation:</strong> Another fun experiment.</li>
-            </ul>
-          </div>
-        </div>
+                  <ul class="tech-tags">
+                    <li>Java</li>
+                    <li>Mininet</li>
+                  </ul>
+              </div>
+            </a>
+
+            <a class="project-card"
+              href="https://github.com/415yoni/ANN_FinalProject"
+              target="_blank" rel="noopener noreferrer">
+              <div class="card-content">
+                <h3>March Madness Neural Network</h3>
+                <p>Trained dual models on 10 years of KenPom data; tuned embeddings, L2, and dropout to predict 2025’s champion (UConn) 
+                  and 11 of 16 Sweet‑16 teams while avoiding over‑fit.</p>
+                  <ul class="tech-tags">
+                    <li>Python</li>
+                    <li>pandas</li>
+                    <li>scikit-learn</li>
+                    <li>TensorFlow</li>
+                  </ul>
+              </div>
+            </a>
+
+            
+            <a class="project-card"
+              href="https://github.com/brianshen03/cs537FUSE"
+              target="_blank" rel="noopener noreferrer">
+              <div class="card-content">
+                <h3>FUSE based file system</h3>
+                <p>Built a user‑space FS that mounts like any Linux drive, supporting create/read/write/delete plus stat. 
+                  Added integrated RAID 0 striping for speed and RAID 1 mirroring for fault‑tolerance, all without kernel modifications.</p>
+                  <ul class="tech-tags">
+                    <li>C</li>
+                    <li>Unix</li>
+                  </ul>
+              </div>
+            </a>
+
+          </div><!-- /.project-grid -->
+        </div><!-- /.section-inner -->
       </section>
+
 
      <section id="skills">
         <div class="section-inner">

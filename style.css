@@ -103,9 +103,9 @@ body {
 
 /* Main Layout */
 main {
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: auto;
+  max-width: none;   /* removes the 900 px cap :contentReference[oaicite:0]{index=0} */
+  margin: 0;         /* no horizontal centring */
+  padding: 0;        /* we’ll add padding back inside .section-inner */
 }
 section {
   margin-bottom: 3rem;
@@ -167,7 +167,7 @@ h3 {
 }
 #resume iframe {
   width: 100%;
-  height: 400px;
+  height: 600px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
@@ -180,3 +180,22 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+/* ---------- Section striping ---------- */
+main > section {
+  /* breathing-room between sections */
+  padding: 4rem 1rem;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;   /* puts the spacing back */
+}
+
+/* odd-numbered <section> elements inside <main> */
+main > section:nth-of-type(odd)  { background-color: #ffffff; } /* light */
+main > section:nth-of-type(even) { background-color: oklab(84.402% -0.00181 -0.01362); } /* slightly darker */
+/* remove the gap between colour bands */
+main > section { margin-bottom: 0; }
+section { margin-bottom: 0; }

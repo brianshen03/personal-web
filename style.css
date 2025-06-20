@@ -117,6 +117,7 @@ h2 {
   margin-bottom: 1rem;
   color: #222;
 }
+
 h3 {
   font-size: 1.5rem;
   margin-top: 1.5rem;
@@ -130,9 +131,20 @@ h3 {
   gap: 24px;
   flex-wrap: wrap;
 }
+
+/* let paragraphs stack inside the text column */
+.about-text p {
+  margin-bottom: 1rem;   /* nice spacing between paragraphs */
+}
+
+.about-text {            /* keeps paragraphs from stretching edge-to-edge */
+  flex: 1;               /* fill remaining space next to the image */
+  min-width: 260px;      /* prevents awkward squish on very narrow screens */
+}
+
 .about-container img {
   border-radius: 8px;
-  width: 200px;
+  width: 250px;
   height: auto;
 }
 .about-container p {
@@ -159,6 +171,42 @@ h3 {
   border-radius: 8px;
   font-size: 0.95rem;
 }
+
+/* ---------- Skill cards grid ---------- */
+.tool-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1.25rem;
+  margin-top:2rem;
+}
+
+.tool-card{
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  padding:1.25rem 0.75rem;
+  text-align:center;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.tool-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+.tool-card i{
+  font-size:48px;      /* icon size */
+  line-height:1;
+  margin-bottom:.5rem;
+}
+
+.tool-card span{
+  display:block;
+  margin-top:.25rem;
+  font-size:.9rem;
+  font-weight:600;
+}
+
 
 /* Resume Section */
 #resume a {
@@ -199,3 +247,10 @@ main > section:nth-of-type(even) { background-color: oklab(84.402% -0.00181 -0.0
 /* remove the gap between colour bands */
 main > section { margin-bottom: 0; }
 section { margin-bottom: 0; }
+/* Center all section titles */
+section > h2,          /* titles placed directly in <section>        */
+.section-inner > h2 {  /* titles nested inside the wrapper div       */
+  text-align: center;
+  margin-left: auto;   /* keep any max-width wrapper centred too */
+  margin-right: auto;
+}

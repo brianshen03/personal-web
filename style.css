@@ -5,11 +5,26 @@
   padding: 0;
 }
 
+/* --------------  Core colour tokens -------------- */
+:root{
+  --c-navy:   #142C3B;
+  --c-teal:   #1F7DA5;
+  --c-blush:  #F2E8E9;
+  --c-slate:  #C8CCD1;
+  --c-lavend: #DCDBDF;
+  --c-white:  #FFFFFF;
+
+  --c-test_light:   #cdd7db;
+  --c-offwhite:   #e3e9ec;
+  --c-test_dark:   #0c0f11;
+
+}
+
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: Georgia, serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
@@ -64,6 +79,7 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
 .hero-image {
   width: 100%;
   height: 100%;
@@ -107,34 +123,42 @@ main {
   margin: 0;         /* no horizontal centring */
   padding: 0;        /* we’ll add padding back inside .section-inner */
 }
-section {
-  margin-bottom: 3rem;
-}
 
 /* Typography */
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: black;
+  font-family:'Poppins',sans-serif;
+
 }
 
 h3 {
   font-size: 1.5rem;
   margin-top: 1.5rem;
   color: #444;
+  font-family:'Poppins',sans-serif;
 }
 
 /* About Section */
-.about-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
+#about .about-container{
+  display: grid;                       /* instead of flex */
+  grid-template-columns: 360px 1fr;    /* image | text */
+  gap: 2.5rem;
+  align-items: start;                  /* top-align for long bios */
+}
+
+@media (max-width: 800px){             /* graceful stack on tablets */
+  #about .about-container{
+    grid-template-columns: 1fr;        /* single column */
+  }
 }
 
 /* let paragraphs stack inside the text column */
 .about-text p {
   margin-bottom: 1rem;   /* nice spacing between paragraphs */
+    font-size: 20px;
+
 }
 
 .about-text {            /* keeps paragraphs from stretching edge-to-edge */
@@ -144,9 +168,11 @@ h3 {
 
 .about-container img {
   border-radius: 8px;
-  width: 250px;
+  width: 300px;
   height: auto;
 }
+
+
 .about-container p {
   flex: 1;
 }
@@ -156,7 +182,7 @@ h3 {
 /* centered helper line under "Projects" */
 .project-subtitle{
   text-align:center;
-  font-size:0.9rem;      /* smaller than H2 */
+  font-size:1.5rem;      /* smaller than H2 */
   color:#666;            /* soft gray—adjust to taste */
   margin: 0.2rem 0 1.4rem; /* small gap above, roomy gap below */
 }
@@ -164,13 +190,23 @@ h3 {
 /* ---------- Project cards grid ---------- */
 .project-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap:1.5rem;
   margin-top:2rem;
 }
 
+/* Tablets / small laptops → 2 columns  */
+@media (max-width: 1024px){
+  .project-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Phones → single column  */
+@media (max-width: 640px){
+  .project-grid{ grid-template-columns: 1fr; }
+}
+
 .project-card{
-  background:#fff;
+  background: var(--c-offwhite);
   border-radius:12px;
   box-shadow:0 2px 6px rgba(0,0,0,.1);
   overflow:hidden;
@@ -180,9 +216,21 @@ h3 {
 }
 
 .project-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 6px 16px rgba(0,0,0,.15);
+  transform: translateY(-8px) scale(1.03);   /* a touch bigger    */
+  background: var(--c-test_dark);                 /* deep navy         */
+  color:       var(--c-white);               /* flip foreground   */
 }
+
+/* make sure links & headings inside inherit the white text */
+.project-card:hover a,
+.project-card:hover h3,
+.project-card:hover p{ color: inherit; }
+
+/* optional: tone down the cover image so white text is legible */
+.project-card:hover img{
+  filter: brightness(0.85) saturate(0.8);
+}
+
 
 .project-card img{
   width:100%;
@@ -195,12 +243,12 @@ h3 {
 }
 
 .project-card h3{
-  font-size:1.1rem;
+  font-size:1.5rem;
   margin-bottom:.5rem;
 }
 
 .project-card p{
-  font-size:.9rem;
+  font-size:1.3rem;
   line-height:1.4;
 }
 
@@ -218,7 +266,7 @@ h3 {
   background:#e3e3e3;       /* neutral pill colour    */
   color:#333;
   padding:.25rem .55rem;
-  font-size:.75rem;
+  font-size:1.1rem;
   font-weight:600;
   border-radius:999px;      /* full pill shape        */
   line-height:1;
@@ -294,9 +342,9 @@ h3 {
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #eee;
+  background-color: var(--c-navy);
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 /* ---------- Section striping ---------- */
@@ -306,14 +354,18 @@ main > section {
 }
 
 .section-inner {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;   /* puts the spacing back */
 }
 
 /* odd-numbered <section> elements inside <main> */
-main > section:nth-of-type(odd)  { background-color: #ffffff; } /* light */
-main > section:nth-of-type(even) { background-color: oklab(84.402% -0.00181 -0.01362); } /* slightly darker */
+main>section:nth-of-type(odd){background:var(--c-test_light);} 
+main>section:nth-of-type(odd)  h2 { color: #000; }          
+main>section:nth-of-type(even){background:var(--c-navy);}
+main > section:nth-of-type(even) h2 { color: var(--c-white); }   
+
+a, .btn-primary{color:var(--c-teal);}
 /* remove the gap between colour bands */
 main > section { margin-bottom: 0; }
 section { margin-bottom: 0; }
@@ -323,4 +375,27 @@ section > h2,          /* titles placed directly in <section>        */
   text-align: center;
   margin-left: auto;   /* keep any max-width wrapper centred too */
   margin-right: auto;
+}
+
+/* --------------------------------------------------------------
+   Hero ▸ animated “scroll down” arrow
+   -------------------------------------------------------------- */
+.scroll-down{
+  position:absolute;
+  bottom:5rem;           
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2.5rem;           /* arrow size */
+  color:#fff;
+  text-decoration:none;
+  animation:bounce 2s infinite;
+  transition:none;            
+}
+
+.scroll-down:hover{opacity:.8;}   /* tiny feedback on hover */
+
+@keyframes bounce{
+  0%,20%,50%,80%,100%{transform:translate(-50%,0);}
+  40%{transform:translate(-50%,6px);}
+  60%{transform:translate(-50%,3px);}
 }

@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume – Brian Shen</title>
 
-  <!-- Re‑use the shared stylesheet & icons -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-  <a class="visually-hidden" href="#main">Skip to content</a>
 
-  <!-- Sticky nav: start in the scrolled state so it has the solid background on this inner page -->
-  <nav id="sticky-nav" class="scrolled">
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <nav id="sticky-nav">
     <a href="index.html#top" class="home-button">Home</a>
-    <a href="index.html#projects">Projects</a>
+    <a href="projects.html">Projects</a>
     <a href="resume.html" aria-current="page">Resume</a>
     <a href="index.html#contact">Contact</a>
   </nav>
@@ -23,15 +23,12 @@
     <section id="resume">
       <div class="section-inner">
         <h2>Resume</h2>
-
-        <!-- Actions -->
         <p>
           <a class="btn-download" href="files/resume.pdf" download aria-label="Download PDF résumé">
             <i class="fas fa-download" aria-hidden="true"></i> Download PDF
           </a>
         </p>
 
-        <!-- In‑page preview. NOTE: height attribute must be CSS (px/vh) via style, not the HTML numeric attribute. -->
         <div class="pdf-frame">
           <iframe
             title="Brian Shen résumé"
@@ -40,7 +37,6 @@
             loading="lazy"></iframe>
         </div>
 
-        <!-- Fallback link if the PDF can't be embedded -->
         <noscript>
           <p>JavaScript is disabled. <a href="files/resume.pdf">Open the PDF resume</a>.</p>
         </noscript>
@@ -48,10 +44,10 @@
     </section>
   </main>
 
-  <!-- Footer wrapped in #contact so it picks up shared styles -->
   <section id="contact">
     <footer>
-      <p>&copy; 2025 Brian Shen | Last updated June 2025 | Contact me: <a href="mailto:brianshen@gmail.com">brianshen@gmail.com</a></p>
+      <p>&copy; 2025 Brian Shen | Last updated June 2025 | Contact me:
+        <a href="mailto:brianshen@gmail.com">brianshen@gmail.com</a></p>
     </footer>
   </section>
 </body>

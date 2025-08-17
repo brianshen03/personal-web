@@ -9,9 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.15.1/devicon.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+<body>
   <a class="visually-hidden" href="#main">Skip to content</a>
-
-  <!-- Minimal sticky nav (same anchors for now) -->
   <nav id="sticky-nav">
     <a href="#top" class="home-button">Home</a>
     <a href="projects.html">Projects</a>
@@ -85,20 +84,6 @@
   </section>
 
   <script>
-    // Sticky-nav state based on the intro's visibility (no hero anymore)
-    const stickyNav = document.getElementById('sticky-nav');
-    const intro = document.querySelector('.intro');
-    if (intro && 'IntersectionObserver' in window) {
-      const obs = new IntersectionObserver(([entry]) => {
-        stickyNav.classList.toggle('scrolled', !entry.isIntersecting);
-      }, { threshold: 0.8 });
-      obs.observe(intro);
-    } else {
-      // Fallback
-      window.addEventListener('scroll', () => {
-        stickyNav.classList.toggle('scrolled', window.scrollY > 40);
-      });
-    }
 
     // Optional: smooth-scroll for hash links (progressive enhancement)
     document.querySelectorAll('a[href^="#"]').forEach(a => {

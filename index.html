@@ -3,204 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
+  <title>Brian Shen</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.15.1/devicon.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.15.1/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <!-- Minimal sticky nav (same anchors for now) -->
   <nav id="sticky-nav">
     <a href="#top" class="home-button">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a href="projects.html">Projects</a>
     <a href="resume.html">Resume</a>
     <a href="#contact">Contact</a>
-
   </nav>
 
-  <section class="hero">
-    <img src="files/chicago.jpeg" alt="Hero Image" class="hero-image" />
+<section id="top" class="intro" aria-label="Intro">
+  <img class="avatar" src="files/unnamed.jpg" alt="Headshot of Brian Shen" />
 
-    <header class="overlay-header">
+  <!-- Head (name, kicker, socials, CTA) -->
+  <div class="intro-text">
+    <h1>Brian Shen</h1>
+    <p class="kicker">Master's student at University of Chicago</p>
+
+    <div class="social-icons">
+      <a href="https://github.com/brianshen03" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/brian-shen-b547b71aa/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/brianshen_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a class="cta" href="projects.html">View projects</a>
+    </div>
+  </div>
+
+  <!-- LEFT column: vertical stats stack -->
+  <ul class="about-stats intro-stats">
+    <li class="stat-card"><i class="fa-solid fa-location-dot"></i><span>Based in Chicago</span></li>
+    <li class="stat-card"><i class="fa-solid fa-graduation-cap"></i><span>UW-Madison B.S.</span></li>
+    <li class="stat-card"><i class="fa-solid fa-laptop-code"></i><span>HPC specialist</span></li>
+  </ul>
+
+  <!-- RIGHT column: bio paragraphs -->
+  <div class="intro-bio">
+    <p class="bio">I build high-performance systems for simulation and data. Recently: a real-time Monte Carlo option pricer (CPU ↔ GPU) with live market data. Starting this autumn at UChicago MPCS (HPC focus). Previously at Synopsys and Milliman.</p>
+    <p>Originally from San Jose, California, I'm now a proud UW–Madison alum, where I earned my Bachelor's in Computer Science. In my next step, I will be working toward my Master's in Computer Science at the University of Chicago, specializing in High Performance Computing. My main areas of interest lie in distributed systems and parallel programming, where I focus on optimizing computing systems and algorithms to achieve peak performance.</p>
+  </div>
+</section>
 
 
-      <h1>Brian Shen</h1>
-      
-      <div class="social-icons">
-        <a href="https://github.com/brianshen03" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/brian-shen-b547b71aa/" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://instagram.com/brianshen_" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
+  <main id="main">
+  <section id="home-secondary" class="home-secondary" aria-label="More about me">
+    <div class="section-inner">
+      <h2>Skills & Tech Stack</h2>
+      <div class="tool-grid">
+        <div class="tool-card"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+        <div class="tool-card"><i class="devicon-c-plain colored"></i><span>C</span></div>
+        <div class="tool-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+        <div class="tool-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+        <div class="tool-card"><i class="devicon-rstudio-plain colored"></i><span>R</span></div>
+        <div class="tool-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="tool-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+        <div class="tool-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+         <div class="tool-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+        <div class="tool-card"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+        <div class="tool-card"><i class="devicon-pandas-original colored"></i><span>Pandas</span></div>
+        <div class="tool-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="tool-card"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+        <div class="tool-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+        <div class="tool-card"><i class="devicon-pytorch-plain colored"></i><span>PyTorch</span></div>
+        <div class="tool-card"><i class="devicon-apache-plain colored"></i><span>ApacheSpark</span></div>
+        <div class="tool-card"><i class="devicon-jira-plain colored"></i><span>Jira</span></div>
+        <div class="tool-card"><i class="devicon-azure-plain colored"></i><span>Azure </span></div>
       </div>
+    </div>
+  </section>
+</main>
 
-      
-    </header>
-
-      <a href="#about" class="scroll-down" aria-label="Scroll to About section"> <i class="fa-solid fa-chevron-down"></i> </a>
-      
+  <section id="contact">
+    <footer>
+      <p>&copy; 2025 Brian Shen | Last updated June 2025 | Contact me: <a href="mailto:brianshen@gmail.com">brianshen@gmail.com</a></p>
+    </footer>
   </section>
 
-
-    <main>
-      
-      <section id="about">
-        <div class="section-inner">
-          <h2>About Me</h2>
-          <div class="about-container">
-            <img src="files/gradphoto.jpg" alt="Brian Shen profile photo"/>
-            <div class="about-text">
-              <p>   Originally from San Jose, California, I'm now a proud UW–Madison alum, where I earned my Bachelor's in Computer Science.
-                    In my next step, I will be working toward my Master's in Computer Science at the University of Chicago,
-                    specializing in High Performance Computing. My main areas of interest lie in distributed systems and parallel programming, where I focus on
-                    optimizing computing systems and algorithms to achieve peak performance.  </p>
-
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris massa, mattis sit amet ultrices eu, 
-                mattis vitae sapien. Etiam tellus ipsum, auctor ac rutrum at, tincidunt at sem. Sed gravida tellus eu vulputate suscipit.
-                 Etiam quis accumsan urna. Morbi eget aliquam ex. In mollis massa eget tincidunt dapibus.</p>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="projects">
-        <div class="section-inner">
-          <h2>Projects</h2>
-          <p class="project-subtitle">Click a card to view details</p>
-          <div class="project-grid">
-
-            <a class="project-card"
-              href="https://github.com/brianshen03/cs640TCP"
-              target="_blank" rel="noopener noreferrer">
-              <div class="card-content">
-                <h3>Mini TCP Stack</h3>
-                <p>Implemented a three‑way handshake, sliding‑window flow control, timeout + fast‑retransmit recovery, one’s‑complement checksums, and a FIN close sequence. 
-                  Transfers remain error‑free under 5 % packet loss in Mininet testbeds.</p>
-
-                  <ul class="tech-tags">
-                    <li>Java</li>
-                    <li>Mininet</li>
-                  </ul>
-              </div>
-            </a>
-
-            <a class="project-card"
-              href="https://github.com/415yoni/ANN_FinalProject"
-              target="_blank" rel="noopener noreferrer">
-              <div class="card-content">
-                <h3>March Madness Neural Network</h3>
-                <p>Trained dual models on 10 years of KenPom data; tuned embeddings, L2, and dropout to predict 2025's champion (UConn) 
-                  and 11 of 16 Sweet 16 teams while avoiding overfitting.</p>
-                  <ul class="tech-tags">
-                    <li>Python</li>
-                    <li>pandas</li>
-                    <li>scikit-learn</li>
-                    <li>TensorFlow</li>
-                  </ul>
-              </div>
-            </a>
-
-            
-            <a class="project-card"
-              href="https://github.com/brianshen03/cs537FUSE"
-              target="_blank" rel="noopener noreferrer">
-              <div class="card-content">
-                <h3>FUSE based file system</h3>
-                <p>Built a user‑space FS that mounts like any Linux drive, supporting create/read/write/delete plus stat. 
-                  Added integrated RAID 0 striping for speed and RAID 1 mirroring for fault‑tolerance, all without kernel modifications.</p>
-                  <ul class="tech-tags">
-                    <li>C</li>
-                    <li>Unix</li>
-                  </ul>
-              </div>
-            </a>
-
-            <a class="project-card"
-              href="https://github.com/brianshen03/personal-web"
-              target="_blank" rel="noopener noreferrer">
-              <div class="card-content">
-                <h3>Personal Website</h3>
-                <p>Built a personal website as a portfolio to showcase my projects and acheivements.</p>
-                  <ul class="tech-tags">
-                    <li>CSS</li>
-                    <li>HTML</li>
-                  </ul>
-              </div>
-            </a>
-
-          </div><!-- /.project-grid -->
-        </div><!-- /.section-inner -->
-      </section>
-
-
-     <section id="skills">
-        <div class="section-inner">
-
-          <h2>Skills & Tech Stack</h2>
-
-            <h3>Languages</h3>
-            <div class="tool-grid">
-                <div class="tool-card"> <i class="devicon-cplusplus-plain colored"></i> <span>C++</span> </div>
-                <div class="tool-card"><i class="devicon-c-plain colored"></i> <span>C</span> </div>
-                <div class="tool-card"> <i class="devicon-python-plain colored"></i> <span>Python</span> </div>
-                <div class="tool-card"> <i class="devicon-java-plain colored"></i> <span>Java</span> </div>
-                <div class="tool-card"> <i class="devicon-rstudio-plain colored"></i> <span>R</span> </div>
-                <div class="tool-card"> <i class="devicon-javascript-plain colored"></i> <span>javascript</span>  </div>
-                <div class="tool-card"> <i class="devicon-html5-plain colored"></i> <span>HTML</span></div>
-                <div class="tool-card"> <i class="devicon-css3-plain colored"></i> <span>CSS</span> </div>
-
-            </div>
-                  
-          <h3>Frameworks · Libraries · Tools</h3>
-                <div class="tool-grid">
-                  <div class="tool-card"> <i class="devicon-react-original colored"></i> <span>React</span> </div>
-                  <div class="tool-card"> <i class="devicon-tensorflow-original colored"></i> <span>TensorFlow</span> </div>
-                  <div class="tool-card"> <i class="devicon-pandas-original colored"></i> <span>Pandas</span> </div>
-                  <div class="tool-card"> <i class="devicon-git-plain colored"></i> <span>Git</span> </div> 
-                  <div class="tool-card"> <i class="devicon-linux-plain colored"></i> <span>Linux</span> </div>
-                  <div class="tool-card"> <i class="devicon-firebase-plain colored"></i> <span>Firebase</span> </div>
-                  <div class="tool-card"> <i class="devicon-pytorch-plain colored"></i> <span>pytorch</span> </div>
-                  <div class="tool-card"> <i class="devicon-apache-plain colored"></i> <span>Apache Spark</span> </div>
-                  <div class="tool-card"> <i class="devicon-jira-plain colored"></i> <span>jira</span> </div>
-                  <div class="tool-card"> <i class="devicon-azure-plain colored"></i> <span>Azure Monitor</span> </div>
-
-                </div>
-
-
-          </div><!-- /.section-inner -->
-      </section>
-        
-    </main>
-
-    <section id="contact">
-
-      <footer>
-        <p>&copy; 2025 Brian Shen | Last updated June 2025 | Contact me: <a href="mailto:your.email@example.com">brianshen@gmail.com</p>
-      </footer>
-    </section>
-
-    <script>
+  <script>
+    // Sticky-nav state based on the intro's visibility (no hero anymore)
     const stickyNav = document.getElementById('sticky-nav');
-    const hero = document.querySelector('.hero');
+    const intro = document.querySelector('.intro');
+    if (intro && 'IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(([entry]) => {
+        stickyNav.classList.toggle('scrolled', !entry.isIntersecting);
+      }, { threshold: 0.8 });
+      obs.observe(intro);
+    } else {
+      // Fallback
+      window.addEventListener('scroll', () => {
+        stickyNav.classList.toggle('scrolled', window.scrollY > 40);
+      });
+    }
 
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > hero.offsetHeight - 80){
-        stickyNav.classList.add('scrolled');
-      } else {
-        stickyNav.classList.remove('scrolled');
-      }
+    // Optional: smooth-scroll for hash links (progressive enhancement)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+      });
     });
-
   </script>
-
 </body>
 </html>

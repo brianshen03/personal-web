@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Brian Shen</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <!-- Sticky nav (solid on inner pages) -->
+  <nav id="sticky-nav" class="scrolled">
+    <a href="index.html#top" class="home-button">Home</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main id="main">
+    <section id="projects">
+      <div class="section-inner">
+        <h2>Projects</h2>
+        <p class="project-subtitle">A selection of work. Click a card to view details.</p>
+
+        <div class="project-grid">
+          <!-- HPC Option Pricer -->
+          <a class="project-card" href="https://github.com/brianshen03/MonteCarloOptionPricer" target="_blank" rel="noopener noreferrer">
+            <div class="card-content">
+              <h3>HPC Option Pricer</h3>
+              <p>Multithreaded European option pricing engine in C++ with OpenMP; accelerating Monte Carlo on real-time option chains (Tradier & FRED). GPU path with CUDA in progress.</p>
+              <ul class="tech-tags"><li>OpenMP</li><li>CUDA</li><li>C++</li></ul>
+            </div>
+          </a>
+
+          <!-- Mini TCP Stack -->
+          <a class="project-card" href="https://github.com/brianshen03/cs640TCP" target="_blank" rel="noopener noreferrer">
+            <div class="card-content">
+              <h3>Mini TCP Stack</h3>
+              <p>Three‑way handshake, sliding window, timeout + fast‑retransmit, one's‑complement checksums, and FIN close. Clean transfers under 5% loss in Mininet.</p>
+              <ul class="tech-tags"><li>Java</li><li>Mininet</li></ul>
+            </div>
+          </a>
+
+          <!-- March Madness NN -->
+          <a class="project-card" href="https://github.com/415yoni/ANN_FinalProject" target="_blank" rel="noopener noreferrer">
+            <div class="card-content">
+              <h3>March Madness Neural Network</h3>
+              <p>Dual models over a decade of KenPom data; tuned embeddings/L2/dropout to predict the 2025 champion (UConn) and 11/16 Sweet 16 teams.</p>
+              <ul class="tech-tags"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>TensorFlow</li></ul>
+            </div>
+          </a>
+
+          <!-- FUSE FS -->
+          <a class="project-card" href="https://github.com/brianshen03/cs537FUSE" target="_blank" rel="noopener noreferrer">
+            <div class="card-content">
+              <h3>FUSE-based File System</h3>
+              <p>User‑space FS with create/read/write/delete/stat; RAID 0 striping for speed and RAID 1 mirroring for fault tolerance — no kernel mods.</p>
+              <ul class="tech-tags"><li>C</li><li>Unix</li></ul>
+            </div>
+          </a>
+
+          <!-- Personal website -->
+          <a class="project-card" href="https://github.com/brianshen03/personal-web" target="_blank" rel="noopener noreferrer">
+            <div class="card-content">
+              <h3>Personal Website</h3>
+              <p>Hand-coded portfolio with dark minimal aesthetic, calm micro-interactions, and accessible, responsive layout.</p>
+              <ul class="tech-tags"><li>CSS</li><li>HTML</li></ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="contact">
+    <footer>
+      <p>&copy; 2025 Brian Shen | Last updated June 2025 | Contact me: <a href="mailto:brianshen@gmail.com">brianshen@gmail.com</a></p>
+    </footer>
+  </section>
+</body>
+</html>
